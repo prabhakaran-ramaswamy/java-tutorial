@@ -1,0 +1,9 @@
+In this example, we create a class MyRunnable that implements the Runnable interface. We implement the run method in MyRunnable with the code that will be executed when the thread starts. Inside the run method, we simply print "Thread is running".
+
+In the Main class, we create an instance of MyRunnable and then create a Thread object, passing the MyRunnable instance to its constructor. We then start the thread using the start method.
+
+When you run this example, you'll see both "Thread is running" and "Main thread is running" printed, possibly in an interleaved order, since the two threads are running concurrently.
+
+
+
+

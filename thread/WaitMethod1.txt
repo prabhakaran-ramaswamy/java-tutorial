@@ -1,0 +1,23 @@
+The wait method in Java is used to temporarily pause the execution of a thread and relinquish the CPU until it is notified to resume. Here's an example that demonstrates the usage of the wait method:
+
+
+In this example, we create a MyThread class that implements the Runnable interface. Inside the run method, we acquire the lock on the provided object (lock in this case) using the synchronized block. The thread starts executing and then calls the wait method on the lock object. This causes the thread to release the lock and enter a waiting state until it receives a notification.
+
+In the Main class, we create an instance of MyThread and start it in a separate thread. After 2 seconds, we notify the waiting thread by acquiring the lock on the same object and calling notify method. This allows the waiting thread to resume its execution.
+
+When you run this example, you'll see the following output:
+
+Thread starts.
+Thread waits for notification.
+(Main thread waits for 2 seconds)
+Main thread sends notification.
+Thread resumes after notification.
+(Main thread continues execution)
+Main thread ends.
+
+The thread starts and waits for a notification. Meanwhile, the main thread sleeps for 2 seconds and then sends a notification to the waiting thread. Upon receiving the notification, the waiting thread resumes its execution and continues with the remaining code. Finally, the main thread continues executing and prints "Main thread ends."
+
+
+
+
+

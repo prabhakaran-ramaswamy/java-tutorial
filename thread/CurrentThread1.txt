@@ -1,0 +1,9 @@
+In this example, the main thread starts executing the main method. We use Thread.currentThread() to obtain a reference to the main thread. We then print the name of the main thread, which is initially "main". After that, we change the name of the main thread to "MyMainThread" using the setName method.
+
+Next, we retrieve and print the ID, priority, and state of the main thread using the respective getter methods (getId, getPriority, getState). In this case, the main thread has an ID of 1, a priority of 5 (default), and a state of "RUNNABLE".
+
+Please note that the specific output may vary depending on the JVM implementation and the operating system.
+
+
+
+

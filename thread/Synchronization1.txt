@@ -1,0 +1,15 @@
+In Java, synchronization is a mechanism that allows multiple threads to access shared resources or critical sections of code in an orderly manner, preventing potential race conditions and ensuring thread safety. This is achieved by using the synchronized keyword or by using explicit locks provided by the java.util.concurrent package.
+
+Here's an example to illustrate synchronization in Java using the synchronized keyword:
+
+In this example, the Counter class has two methods, increment() and getCount(), which modify and retrieve the count variable, respectively. Both methods are declared as synchronized, which means that only one thread can execute them at a time.
+
+The IncrementThread class extends Thread and takes a Counter object as a parameter in its constructor. The run() method of this class increments the counter in a loop.
+
+In the main method, two IncrementThread objects are created and started. The join() method is called on both threads to wait for their completion before printing the final count.
+
+By using the synchronized keyword on the increment() and getCount() methods of the Counter class, we ensure that the count is incremented and retrieved in a synchronized manner, avoiding potential data races and maintaining the integrity of the shared variable count.
+
+
+
+

@@ -1,0 +1,9 @@
+In this example, the Counter class contains a private lock object, which will be used for synchronization purposes. The increment() and getCount() methods are synchronized using the synchronized block, where the lock object is used as the monitor.
+
+The IncrementThread class and the main method remain the same as in the previous example.
+
+By using the synchronized block with the lock object, we ensure that only one thread can execute the synchronized block at a time. This ensures thread safety and prevents race conditions when accessing or modifying shared resources.
+
+
+
+

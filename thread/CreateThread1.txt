@@ -1,0 +1,9 @@
+In this example, we create a class MyThread that extends the Thread class. We override the run method in MyThread with the code that will be executed when the thread starts. Inside the run method, we simply print "Thread is running".
+
+In the Main class, we create an instance of MyThread and start it by calling the start method. This will execute the run method in a separate thread. Meanwhile, the main thread continues executing the code below and prints "Main thread is running".
+
+When you run this example, you'll see both "Thread is running" and "Main thread is running" printed, possibly in an interleaved order, since the two threads are running concurrently.
+
+
+
+

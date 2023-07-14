@@ -1,0 +1,33 @@
+In Java, threads have a priority associated with them, which is used by the operating system's thread scheduler to determine the order in which threads are executed. Thread priority is represented by an integer value ranging from 1 (lowest priority) to 10 (highest priority), and the default priority is 5.
+
+Here's an example that demonstrates the usage of thread priority in Java:
+
+In this example, we create a MyThread class that extends the Thread class. Inside the run method, the thread prints a sequence of numbers along with its name.
+
+In the Main class, we create two instances of MyThread with different names. We set the priority of thread1 to the maximum priority (Thread.MAX_PRIORITY), which is 10, and the priority of thread2 to the minimum priority (Thread.MIN_PRIORITY), which is 1.
+
+When you run this example, the output may vary, but it typically shows that the higher-priority thread (thread1) gets more CPU time than the lower-priority thread (thread2). However, it's important to note that thread priority behavior can vary across different operating systems and JVM implementations.
+
+The output might look like this:
+
+Thread 1 starts.
+Thread 2 starts.
+Thread 1: 0
+Thread 2: 0
+Thread 1: 1
+Thread 2: 1
+Thread 1: 2
+Thread 2: 2
+Thread 1: 3
+Thread 2: 3
+Thread 1: 4
+Thread 2: 4
+Thread 1 ends.
+Thread 2 ends.
+Main thread ends.
+
+In this example, thread1 (with higher priority) may execute more iterations than thread2 (with lower priority) before completion. However, the exact behavior may vary depending on the underlying system and thread scheduler.
+
+
+
+

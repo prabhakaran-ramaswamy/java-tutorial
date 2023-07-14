@@ -1,0 +1,15 @@
+In this example, the sleep method is called on the main thread to pause its execution for 2 seconds. The sleep method takes the number of milliseconds as its argument.
+
+When you run this example, you'll see the following output:
+
+Main thread starts.
+(Main thread waits for 2 seconds)
+Main thread resumes after sleep.
+Main thread ends.
+
+The main thread starts, then it pauses for 2 seconds due to the sleep method. After the sleep duration, the main thread resumes its execution and prints "Main thread resumes after sleep." Finally, it continues executing the remaining code and prints "Main thread ends."
+
+
+
+
+

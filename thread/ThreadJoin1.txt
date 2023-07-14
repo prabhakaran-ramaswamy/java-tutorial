@@ -1,0 +1,20 @@
+The join method in Java allows one thread to wait for the completion of another thread. When a thread calls the join method on another thread, it will pause its execution until the joined thread finishes its execution. Here's an example that demonstrates the usage of the join method:
+
+In this example, we create a MyThread class that extends the Thread class. Inside the run method, the thread simulates some work by sleeping for 2 seconds.
+
+In the Main class, we create two instances of MyThread. We start both threads, and then the main thread calls the join method on thread1. This causes the main thread to pause and wait until thread1 completes its execution. After thread1 finishes, the main thread proceeds to call the join method on thread2, waiting for it to complete as well.
+
+When you run this example, you'll see the following output:
+
+
+Thread 1 starts.
+Thread 2 starts.
+(Main thread waits for Thread 1 to complete.)
+Thread 1 ends.
+Thread 2 ends.
+(Main thread waits for Thread 2 to complete.)
+Thread 1 has completed.
+Thread 2 has completed.
+Main thread ends.
+
+In this example, the main thread waits for thread1 to complete using the join method. Once thread1 finishes, the main thread moves on to wait for thread2 using join. After both threads have completed, the main thread resumes its execution and prints "Main thread ends."

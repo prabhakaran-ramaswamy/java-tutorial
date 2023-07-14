@@ -1,0 +1,22 @@
+In this example, we create a MyThread class that extends the Thread class. Each instance of MyThread takes a name and a delay as parameters. Inside the run method, the thread simulates some work by sleeping for the specified delay duration.
+
+In the Main class, we create three instances of MyThread with different delays. We start all three threads and then the main thread calls the join method on each thread, waiting for them to complete. By calling join on each thread sequentially, the main thread will wait for all the threads to finish their execution.
+
+When you run this example, you'll see the following output:
+
+Thread 1 starts.
+Thread 2 starts.
+Thread 3 starts.
+Main thread waits for all threads to complete.
+Thread 3 ends.
+Thread 1 ends.
+Thread 2 ends.
+All threads have completed.
+Main thread ends.
+
+In this example, the main thread waits for all three threads (thread1, thread2, and thread3) to complete by calling the join method on each of them. After all the threads have finished, the main thread resumes its execution and prints "All threads have completed" followed by "Main thread ends."
+
+
+
+
+
